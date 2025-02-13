@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>label tag</title>
+    </head>
+
+    <!-- fieldset 태그로 그룹을 지을 수 있음(박스모양의 테두리가 생김) -->
+    <!-- legend 태그로 그룹의 이름을 지을 수 있음 -->
+    <body>
+        <form action="#">
+
+            <fieldset>
+                <legend>기본 정보</legend>
+                <p>
+                    <label for="userid">아이디</label>
+                    <input type="text" id="userid" placeholder="아이디">
+                </p>
+                <p>
+                    <label for="passwd">비밀번호</label>
+                    <input type="passwd" id="passwd" placeholder="비밀번호">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>선택 정보</legend>
+                <p>
+                    <label for="age">나이</label>
+                    <input type="number" id="age" placeholder="나이">
+                </p>
+                <p>
+                    <label for="recommender">추천인</label>
+                    <input type="text" id="recommender" placeholder="추천인">
+                </p>
+            </fieldset>
+
+        </form>
+        <!-- form 종료 -->
+    </body>
+
+</html>

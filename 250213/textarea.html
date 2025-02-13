@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>textarea tag</title>
+    </head>
+
+    <body>
+        <form action="#">
+            <fieldset>
+                <legend>블로그 글쓰기</legend>
+
+                <p>
+                    <label for="title">제목
+                        <input type="text" name="title" id="title">
+                    </label>
+                </p>
+                <p>
+                    <!-- readonly는 작성이 불가능하고 읽기만 가능하게 하는 속성 -->
+                    <label for="desc">내용
+                        <textarea name="desc" id="desc" readonly>읽기만 가능합니다.</textarea>
+                    </label>
+                </p>
+            </fieldset>
+        </form>
+        <!-- form 종료 -->
+    </body>
+
+</html>
