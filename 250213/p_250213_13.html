@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <style>
+            /* 행과 열에 색 지정 및 텍스트 위치 지정 */
+            tr, td, th {
+                border: 2px solid green;
+                text-align: center;
+            }
+            table {
+                width: 500px;
+                height: 200px;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>테이블 만들기 05</title>
+    </head>
+
+    <!-- td값이 굵어지는 이유? -->
+    <body>
+        <!-- 전체 테이블 -->
+        <table>
+            <caption>행 통합 테이블</caption>
+            <!-- 전체 테이블 외곽선 만들기 -->
+            <tr>
+                <th>
+                    <!-- 안쪽 테이블 -->
+                    <table>
+                        <!-- 안쪽 테이블 값 -->
+                        <tr>
+                            <th>1행</th>
+                            <td colspan="3">1행 1열</td>
+                            <!-- <td>1행 2열</td> -->
+                        </tr>
+                        <tr>
+                            <th rowspan="2">2행</th>
+                            <td colspan="2">2행 1열</td>
+                            <!-- <td>2행 2열</td> -->
+                        </tr>
+                        <tr>
+                            <!-- <th>3행</th> -->
+                            <td colspan="2">3행 2열</td>
+                            <!-- <td>3행 2열</td> -->
+                        </tr>
+                    </table>
+                    <!-- 안쪽 테이블 종료-->
+                </td>
+            </tr>
+        </table>
+        <!-- 전체 테이블 종료-->
+
+        <p></p>
+
+                <!-- 전체 테이블 -->
+                <table>
+                    <caption>열 통합 테이블</caption>
+                    <!-- 전체 테이블 외곽선 만들기 -->
+                    <tr>
+                        <th>
+                            <!-- 안쪽 테이블 -->
+                            <table>
+                                <!-- 안쪽 테이블 값 -->
+                                <tr>
+                                    <th>1열</th>
+                                    <td colspan="2">2열</td>
+                                    <!-- <td>1행 2열</td> -->
+                                </tr>
+                                <tr>
+                                    <th>2행 1열</th>
+                                    <td>2행 2열</td>
+                                    <td>2행 3열</td>
+                                </tr>
+                            </table>
+                            <!-- 안쪽 테이블 종료-->
+                        </td>
+                    </tr>
+                </table>
+                <!-- 전체 테이블 종료-->
+    </body>
+
+</html>

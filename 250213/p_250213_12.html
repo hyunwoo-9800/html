@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <style>
+            /* 테이블 사이즈 조절 */
+            table {
+                width: 500px;
+                height: 200px;
+            }
+
+            /* 행과 열에 색 지정 및 텍스트 위치 지정 */
+            tr, td, th {
+                border: 2px solid pink;
+                text-align: center;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>테이블 만들기 04</title>
+    </head>
+
+    <body>
+
+        <table>
+            <caption>테이블 제목</caption>
+            <tr>
+                <th>1행 제목</th>
+                <td rowspan="2">1행 1열 + 2행 1열</td>
+                <td>1행 2열</td>
+            </tr>
+            <tr>
+                <th rowspan="2">2행 제목 <br> + <br> 3행 제목 </th>
+                <!-- <td>2행 1열</td> -->
+                <td>2행 1열</td>
+            </tr>
+            <tr>
+                <!-- <th>3행 제목</th> -->
+                <td colspan="2">3행 1열 + 3행 2열</td>
+                <!-- <td>3행 2열</td> -->
+            </tr>
+        </table>
+
+</body>
+
+</html>

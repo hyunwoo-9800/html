@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <style>
+            /* 행과 열에 색 지정 및 텍스트 위치 지정 */
+            tr, td, th {
+                border: 2px solid black;
+                text-align: center;
+            }
+
+            /* 지정한 td만 색을 입히기 위함 */
+            td.head {
+                background-color: aqua;
+            }
+
+            ul {
+
+                text-align: left;
+            }
+
+            /* table-layout: auto로 테이블에 들어간 값에 따라 자동으로 사이즈 조절 */
+            table {
+                border-collapse: collapse;
+                width: auto;
+                height: auto;
+                table-layout: auto;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sitemap</title>
+    </head>
+
+    <body>
+        <table>
+            <!-- 강조하기 위해 strong태그 사용 -->
+            <caption style="font-size: x-large; padding: 20px;"><strong>Sitemap</strong></caption>
+            <tr>
+                <td class="head">소개</td>
+                <td class="head">영화</td>
+                <td class="head">음악</td>
+            </tr>
+            <!-- 소개, 영화, 음악에 해당하는 내용 -->
+            <tr>
+                <td>
+                    <ul>
+                        <li>주인장소개</li>
+                        <li>가족소개</li>
+                        <li>친구소개</li>
+                        <li>홈페이지소개</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>추억의 영화</li>
+                        <li>최근에 본 영화</li>
+                        <li>영화 포스터 모음</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>음악 감상실</li>
+                        <li>The Real Group</li>
+                        <li>음악자료실</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="head">갤러리</td>
+                <td class="head">게시판</td>
+                <td class="head">동호회</td>
+            </tr>
+            <!-- 갤러리, 게시판, 동호회 해당하는 내용 -->
+            <tr>
+                <td>
+                    <ul>
+                        <li>장나라</li>
+                        <li>소유진</li>
+                        <li>김희선</li>
+                        <li>정우성</li>
+                        <li>장국영</li>
+                        <li>장동건</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>자유게시판</li>
+                        <li>방명록</li>
+                        <li>묻고답하기</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>우주애</li>
+                        <li>산악회</li>
+                        <li>춤바람</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </body>
+
+</html>

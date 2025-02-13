@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <style>
+            /* 테이블 사이즈 조절 */
+            table {
+                width: 500px;
+                height: 200px;
+            }
+            /* 행과 열에 색 지정 및 텍스트 위치 지정 */
+            tr, td {
+                border: 2px solid red;
+                text-align: center;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>테이블 만들기 01</title>
+    </head>
+
+    <body>
+        <!-- 전체 테이블 -->
+        <table>
+            <!-- 전체 테이블 외곽선 만들기 -->
+            <tr>
+                <td>
+
+                    <!-- 안쪽 테이블 -->
+                    <table>
+                        <!-- 안쪽 테이블 값 -->
+                        <tr>
+                            <td>테스트1</td>
+                            <td>테스트2</td>
+                            <td>테스트3</td>
+                        </tr>
+                        <tr>
+                            <td>테스트4</td>
+                            <td>테스트5</td>
+                            <td>테스트6</td>
+                        </tr>
+                    </table>
+                    <!-- 안쪽 테이블 종료-->
+                </td>
+
+            </tr>
+        </table>
+        <!-- 전체 테이블 종료-->
+    </body>
+
+</html>
