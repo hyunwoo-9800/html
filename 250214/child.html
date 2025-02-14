@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <style>
+            /* class가 box인 자식 관계 p태그만 색이 바뀜 */
+            .box > p {
+                color: red;
+            }
+
+            /* class가 coupang-box_div인 자식 관계 p태그만 색이 바뀜 */
+            .coupang-box_div > p {
+                color: blue;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>자식 선택자(Child Selector)</title>
+    </head>
+
+    <body>
+        <div class="box">
+            <p>lorem 1</p>
+            <div>
+                <p>lorem 2</p>
+            </div>
+            <p>lorem 3</p>
+            <h1>lorem 4</h1>
+        </div>
+
+        <br>
+
+        <div class="coupang-box">
+            <p>coupang 1</p>
+            <div class="coupang-box_div">
+                <p>coupang 2</p>
+            </div>
+            <p>coupang 3</p>
+            <h1>coupang 4</h1>
+        </div>
+    </body>
+
+</html>

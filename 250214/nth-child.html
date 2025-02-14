@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <style>
+            /* 각 태그에 외곽선 넣기 */
+            ol {
+                border-width : 3px;
+                border-color : red;
+                border-style : solid;
+            }
+            ul {
+                border-width : 3px;
+                border-color : red;
+                border-style : solid;
+            }
+            div {
+                border-width : 3px;
+                border-color : red;
+                border-style : solid;
+            }
+
+            /* 부모의 첫 번째 자식 */
+            li:first-child {
+                color: red;
+            }
+
+            /* 부모의 마지막 자식 */
+            li:last-child {
+                color: blue;
+            }
+
+            /* div 태그의 p태그의 첫 번째 자식 */
+            div p:nth-child(1) {
+                color: green;
+            }
+            
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>first-child, last-child</title>
+    </head>
+
+    <body>
+        
+        <!-- 두 태그 모두 적용되는 것을 확인 -->
+        ol태그&#8595;
+        <ol>
+            <li>첫 번째</li>
+            <li>두 번째</li>
+            <li>세 번째</li>
+            <li>네 번째</li>
+            <li>다섯 번째</li>
+        </ol>
+        
+        <br>
+
+        ul태그&#8595;
+        <ul>
+            <li>첫 번째</li>
+            <li>두 번째</li>
+            <li>세 번째</li>
+            <li>네 번째</li>
+        </ul>
+
+        <br>
+        
+        div 태그&#8595;
+        <div>
+            <p>첫 번째</p>
+            <p>두 번째</p>
+            <p>세 번째</p>
+        </div>
+        
+    </body>
+
+
+</html>

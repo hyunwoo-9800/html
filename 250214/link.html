@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <style>
+            /* 한번도 접속하지 않은 링크 */
+            a:link {
+                color: orange;
+            }
+            /* 한번이라도 접속한 링크 */
+            a:visited {
+                color: green;
+            }
+            /* 요소에 마우스를 올렸을 때 */
+            p:hover {
+                color: blue;
+            }
+            /* 요소를 마우스로 클릭하고 있을 때 */
+            button:active {
+                color: purple;
+            }
+            /* 버튼 크기 키우기 */
+            button {
+                padding: 10px 30px;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>링크 가상 클래스</title>
+    </head>
+
+    <body>
+        <a href="https://www.naver.com">네이버</a>
+        
+        <p></p>
+        
+        <a href="https://www.google.com">구글</a>
+        
+        <p></p>
+        
+        <a href="https://www.nate.com">네이트</a>
+        
+        <p></p>
+
+        <p>hover blue 적용</p>
+
+        <p></p>
+
+        <button>클릭한 상태로 유지해 보세요</button>
+    </body>
+
+</html>

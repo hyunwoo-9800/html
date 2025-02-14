@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <style>
+            /* h1의 인접 형제 요소 h2를 의미 */
+            h1 + h2 {
+                color: red;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>인접 형제 선택자(abjacent Selector)</title>
+    </head>
+
+    <body>
+        <h1>lorem1</h1>
+        <!-- 형제관계이면서 인접한 h2만 적용 -->
+        <h2>lorem2</h2>
+
+        <!-- 적용x -->
+        <h2>lorem3</h2>
+        <h3>lorem4</h3>
+
+        <h1>h1 - 1</h1>
+        <div>
+            <!-- 중간에 div태그가 있어서 적용이 안되는 듯?-->
+            <h2>h2 - 1</h2>
+
+            <h1>div - h1 - 1</h1>
+            <!-- 형제관계이면서 인접한 h2여서 적용-->
+            <h2>div - h2 - 1</h2>
+        </div>
+    </body>
+
+</html>

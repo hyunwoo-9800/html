@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <style>
+            /* 커서가 활성화 되면 색을 바꿈 */
+            input:focus {
+                color: blue;
+            }
+
+            /* 체크가 되어있고 인접 label일때 색을 바꿈 */
+            input:checked+label {
+                color: red;
+            }
+
+            /* input타입이 비활성일 경우 색을 바꿈 */
+            input:disabled, button:disabled {
+                background-color: darkgray;
+            }
+
+            /* input타입이 활성일 경우 색을 바꿈 */
+            input:enabled, button:enabled {
+                background-color: coral;
+            }
+
+            /* 버튼 크기 키우기 */
+            button {
+                padding: 10px 30px;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>focus</title>
+    </head>
+
+    <body>
+        <form action="#" method="get">
+            <input type="text">
+
+            <p></p>
+
+            <input type="checkbox" id="adult">
+            <label for="adult">성인(20세이상)</label>
+            <input type="checkbox" id="child">청소년
+
+            <p></p>
+
+            <input type="password" value="1234" disabled>
+
+            <p></p>
+
+            <button disabled>못 누르는 버튼</button>
+
+            <p></p>
+
+            <input type="text" value="enabled input">
+
+            <p></p>
+
+            <button>
+                <enabled 버튼>
+            </button>
+
+            <p></p>
+
+            <input type="submit" value="제출">
+            <input type="reset" value="다시작성">
+        </form>
+        <!-- form 종료 -->
+    </body>
+
+</html>

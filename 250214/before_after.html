@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <style>
+            /* p태그의 앞 쪽과 뒤 쪽 컨텐츠 영역에 글자 추가 */
+            p::before {
+                color: blueviolet;
+                content: "<before>";
+            }
+
+            p::after {
+                content: "<after>";
+            }
+
+            /* 텍스트 중앙정렬 */
+            p {
+                text-align: center;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>before, after</title>
+    </head>
+
+    <body>
+        <p>Lorem, ipsum dolor.</p>
+
+        <!-- div태그 안에 있는 p태그도 적용되는 것을 확인 -->
+        <div>
+            <p>Lorem, ipsum dolor.</p>
+        </div>
+    </body>
+
+</html>

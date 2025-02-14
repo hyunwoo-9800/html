@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <style>
+            /* div의 하위 p태그만 바뀜 */
+            div p {
+                color: red;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>하위 선택자(descendant Selector)</title>
+    </head>
+
+    <body>
+        <div>
+            <p>lorem 1</p>
+            <ul>
+                <li>
+                    <p>lorem 2</p>
+                </li>
+                <li>
+                    <p>div - ul - li - p</p>
+                </li>
+                <li>
+                    <!-- hn태그여서 변화 없음 -->
+                    <h2>div - ul - li - h2</h2>
+                </li>
+            </ul>
+            <!-- hn태그여서 변화 없음 -->
+            <h1>div - h1</h1>
+        </div>
+
+        <!-- div 외부에 있어서 변화 없음 -->
+        <p>lorem 4</p>
+    </body>
+
+</html>
