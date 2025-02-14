@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <style>
+            /* a href의 값만 변경 */
+            a[href] {
+                color: red;
+                display: block; /* a 태그를 block-level 요소로 지정 */
+            }
+
+            /* a태그의 타겟이 blank인 값만 변경 */
+            a[target="_blank"] {
+                color: plum;
+                display: block;
+            }
+            
+            /* 다른 선택자와 같이 사용가능 */
+            #a1[href] {
+                color: yellowgreen;
+                display: block;
+            }
+            .c1[href] {
+                color: brown;
+                display: block;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>기본 속성 선택자(attribute selector)</title>
+    </head>
+
+    <body>
+        <a href="#">기본 a 태그</a>
+        <a href="#" target="_blank">새창으로 열리는 a 태그</a>
+        <a id="a1" href="#">a태그 a1 아이디</a><br>
+        <a class="c1" href="#">a태그 c1 클래스</a>
+        <h1 class="c1">h1태그 c1 클래스</h1>
+
+        <!-- 링크 이동은 불가능 하지만 색이 바뀌는 것은 확인가능 -->
+        <h1 class="c1" href="#">h1태그 c1 클래스 href속성</h1>
+    </body>
+
+</html>
