@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>적용 우선 순위와 개별성</title>
+        <style>
+            /* !important는 인라인 보다 우선 젹용 */
+                p {
+                    color: blue !important;
+                }
+
+            #main #sub .title { /* 0, 2, 1, 0 */
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="main">
+            <div id="sub">
+                <!-- 1, 0, 0, 0 -->
+                <p class="title" style="color: green;">important</p>
+            </div>
+        </div>
+    </body>
+
+</html>
