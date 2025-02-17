@@ -4,44 +4,54 @@
     <head>
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>Type Selector</title>
+        <title>Pseudo Selector</title>
         <style>
+          
             /* 가상 클래스 */
+            /* 링크를 클릭하기 전 색은 파랗게 밑줄이 나오게 설정 */
             a:link {
                 color: #0000ff;
+                text-decoration: underline;
             }
 
+            /* 한 번이라도 방문한 적이 있으면 링크를 빨갛게 설정 */
             a:visited {
                 color: #ff0000;
             }
 
+            /* 링크에 마우스를 올릴 때 텍스트 위에 줄을 그림 */
             a:hover {
                 text-decoration: overline;
             }
 
+            /* 링크를 클릭했을 때 링크의 색을 노랗게 만듬 */
             a:active {
                 background-color: #ffff00;
             }
 
-            div d1 {
+            /* d1클래스의 외곽선과 너비, padding 지정 */
+            div.d1 {
                 border: 1px dashed #ff0000;
                 width: 400px;
                 padding: 5px;
             }
 
             /* 가상 클래스 */
-            div d1:hover {
+            /* d1에 마우스를 올렸을 때 영역을 노랗게 만듬 */
+            div.d1:hover {
                 background-color: #ffff00;
             }
 
-            div d2 {
+            /* d2클래스의 외곽선과 너비, padding 지정 */
+            div.d2 {
                 border: 1px dashed #008000;
                 width: 400px;
                 padding: 5px;
             }
 
             /* 가상 클래스 */
-            div d2:hover {
+            /* d2에 마우스를 올렸을 때 영역을 초록색으로 만듬 */
+            div.d2:hover {
                 background-color: #008000;
             }
         </style>

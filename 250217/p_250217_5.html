@@ -4,8 +4,9 @@
     <head>
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>Type Selector</title>
+        <title>Attribute Selector</title>
         <style>
+            /* h1태그의 text, p태그의 text, h1태그의 text="attr3"를 지정 */
             h1[text] {
                 color: #ff0000;
                 background-color: #808080;
@@ -23,7 +24,11 @@
 
     <body>
         <h1 text="attr3">text 속성 이름 선택자</h1>
+
+        <!-- h1태그의 text="attr2"는 지정되어있지 않지만 h1[text]가 지정되어있어 해당 CSS로 출력 -->
         <h1 text="attr2">text 속성 이름 선택자</h1>
+        
+        <!-- p태그의 text="attr3"는 지정되어있지 않지만 h1[text]가 지정되어있어 해당 CSS로 출력 -->
         <p text="attr3">text 속성 이름 선택자</p>
         <h1 text="attr3">속성과 속성값 선택자</h1>
     </body>

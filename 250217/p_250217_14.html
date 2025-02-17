@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>로그인 화면</title>
+        <style>
+
+            /* 로그인 박스 css */
+            #login_box {
+                width: 300px;
+                height: 200px;
+                background-color: #eeeeee;
+                border: solid 1px #aaaaaa;
+                border-radius: 15px;
+                box-shadow: 6px 6px 5px #888888;
+                text-align: center;
+            }
+
+            input:focus {
+                background-color: #808080;
+            }
+
+            #id, #pw {
+                display: flex;
+                width: 250px;
+            }
+
+            /* 링크 클릭 전 css지정 */
+            /* 색은 회색, 밑줄은 제거 */
+            a:link {
+                text-decoration: none;
+                color: #888888;
+            }
+
+            #radio {
+                display: flex;
+            }
+
+            /* border-radius는 테두리를 둥글게 만들기 위함 */
+            #rogin_submit {
+                border-radius: 5px;
+                width: 250px;
+                padding: 7px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form action="#" method="get">
+            <div id="login_box">로그인 화면
+
+                <p></p>
+
+                <input id="id" type="text" placeholder="ID를 입력해주세요.">
+
+                <p></p>
+
+                <input id="pw" type="password" placeholder="패스워드를 입력해주세요.">
+
+                <p></p>
+                
+                <div id="radio">
+                    <input type="checkbox" id="radio_check">로그인 상태 유지
+                </div>
+                <p></p>
+
+                <input type="submit" id="rogin_submit" value="로그인">
+            </div>
+
+            <br>
+
+            <a href="#">비밀번호 찾기</a> | <a href="#">아이디 찾기</a> | <a href="#">회원가입</a>
+        </form>
+    </body>
+
+</html>

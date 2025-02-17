@@ -6,29 +6,35 @@
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <title>states pseudo-classes</title>
         <style>
+            /* div안의 값을 하얀색으로 지정 */
             div {
                 color: #ffffff;
             }
 
+            /* h2의 첫 번째 문자에 적용될 css */
             h2:first-letter {
                 font-size: 30px;
                 color: #ff0000;
                 text-transform: uppercase;
             }
 
+            /* h3의 첫 번째 라인에 적용될 css */
             h3:first-line {
                 color: #0000ff;
             }
 
+            /* input을 마우스로 클릭했을 때 */
             input:focus {
                 background-color: #ff0000;
             }
 
-            input:checked+div.d1 {
+            /* input체크 박스에 체크를 했을 때 checked된 인접 형제 div태그의 클래스가 d1인 요소의 배경색 지정 */
+            input:checked + div.d1 {
                 background-color: #808080;
             }
 
-            input:checked+div.d2 {
+            /* input체크 박스에 체크를 했을 때 checked된 인접 형제 div태그의 클래스가 d2인 요소의 배경색 지정 */
+            input:checked + div.d2 {
                 background-color: #000000;
             }
         </style>

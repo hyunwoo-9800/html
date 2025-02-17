@@ -6,15 +6,15 @@
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <title>Adjacent Selector_1</title>
         <style>
-            h1+h2+ul {
+            h1 + h2 +ul {
                 color: #0000ff;
             }
 
-            div+h3 {
+            div + h3 {
                 color: #ff0000;
             }
 
-            h3+p {
+            h3 + p {
                 color: #800080;
                 background-color: #ffff00;
             }
@@ -25,13 +25,20 @@
         <div>
             <h1>인접 형제 선택자1</h1>
             <h2>인접 형제 선택자2</h2>
+
+            <!-- h1과 h2의 인접 형제 영역인 ul태그의 색이 바뀜 -->
             <ul>목록
                 <li>주제1</li>
                 <li>주제2</li>
             </ul>
+
         </div>
+        <!-- div와 인접한 h3태그여서 색이 바뀜 -->
         <h3>Adjacent Selector_1</h3>
+
+        <!-- h3태그와 인접한 p태그여서 색이 바뀜  -->
         <p>인접 형제 선택자에 의한 스타일 적용</p>
+        
         <h3>Adjacent Selector_2</h3>
     </body>
 
