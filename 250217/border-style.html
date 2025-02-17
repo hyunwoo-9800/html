@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>border-style(inherit)</title>
+        <title>border-style</title>
         <style>
             /* p태그 테두리 만들기 */
             p {
@@ -60,6 +60,181 @@
             .outset {
                 border-style: outset;
             }
+            h1 {
+                border: 10px solid #ffc0cb;
+            }
+            h2 {
+                border-bottom: 10px dotted #00f;
+            }
+
+            /* padding 영역(요소의 내부 여백) */
+            ul {
+                border: 10px solid #7fffd4;
+                padding: 20px;
+            }
+
+            /* content 영역 */
+            /* width = 너비, height = 높이 */
+            .div_content {
+                text-align: center;
+                width: 100px;
+                height: 100px;
+                border: 1px solid #00008b;
+            }
+            div p {
+                border: 1px solid #000;
+                padding: 10px;
+            }
+
+            /* 컨텐츠 전체의 영역 지정 */
+            .div_box {
+                width: 100px;
+                height: 100px;
+                padding: 10px;
+                border: 1px solid #f0e68c;
+                margin: 10px;
+            }
+
+            /* 컨텐츠 전체의 영역을 정할 때 box_sizing 속성이 더 간단하다 */
+            .div_box_sizing {
+                font-size: small;
+                width: 100px;
+                height: 100px;
+                padding: 10px;
+                border: 1px solid #000080;
+                margin: 10px;
+                box-sizing: border-box; /* width, height속성의 적용 기준을 바꿈 */
+            }
+
+            /* 박스 모델과 display속성 */
+            .h_display {
+                border: 1px solid #808080;
+                display: inline;
+            }
+
+            /* 요소에 배경 색 넣기 */
+            .div_background {
+                width: 100px;
+                height: 100px;
+                padding: 10px;
+                background-color: #adff2f;
+            }
+
+            /* 요소에 배경 이미지 넣기 */
+            .div_img {
+                border: solid #4169e1;
+                width: 160px;
+                height: 120px;
+                background-image: url('../images/coffee.jpg');
+            }
+
+            /* 이미지 크기 조정 예시 */
+            .div_img_small {
+                border: solid #4169e1;
+                width: 80px;
+                height: 60px;
+                background-image: url('../images/coffee.jpg');
+            }
+
+            .div_img_big {
+                border: solid #4169e1;
+                width: 320px;
+                height: 260px;
+                background-image: url('../images/coffee.jpg');
+            }
+
+            /* 이미지보다 배경이 클 경우 */
+
+            /* 이미지 반복 x */
+            .div_img_repeat {
+                border: solid #4169e1;
+                width: 360px;
+                height: 260px;
+                background-image: url('../images/coffee.jpg');
+                background-repeat: no-repeat;
+            }
+
+            /* 가로 방향으로 반복 */
+            .div_img_repeat_x {
+                border: solid #4169e1;
+                width: 360px;
+                height: 260px;
+                background-image: url('../images/coffee.jpg');
+                background-repeat: repeat-x;
+            }
+
+            /* 세로 방향으로 반복 */
+            .div_img_repeat_y {
+                border: solid #4169e1;
+                width: 360px;
+                height: 260px;
+                background-image: url('../images/coffee.jpg');
+                background-repeat: repeat-y;
+            }
+
+            /* 가로 세로 방향으로 반복 */
+            .div_img_repeat_round {
+                border: solid #4169e1;
+                width: 360px;
+                height: 260px;
+                background-image: url('../images/coffee.jpg');
+                background-repeat: round;
+            }
+
+            /* 잘리지 않도록 반복 */
+            .div_img_repeat_space {
+                border: solid #4169e1;
+                width: 360px;
+                height: 260px;
+                background-image: url('../images/coffee.jpg');
+                background-repeat: space;
+            }
+
+            /* 크기 유지 */
+            .div_img_auto {
+                border: solid #4169e1;
+                width: 400px;
+                height: 260px;
+                background-image: url('../images/coffee.jpg');
+                background-size: auto;
+            }
+
+            /* 비율을 유지하면서 배경에 꽉 채움 */
+            .div_img_cover {
+                border: solid #4169e1;
+                width: 400px;
+                height: 260px;
+                background-image: url('../images/coffee.jpg');
+                background-size: cover;
+            }
+
+            /* 비율을 유지하면서 크기를 키우거나 줄임(배경 크기에 맞게) */
+            .div_img_contain {
+                border: solid #4169e1;
+                width: 400px;
+                height: 260px;
+                background-image: url('../images/coffee.jpg');
+                background-size: contain;
+            }
+
+            /* 이미지 위치 지정 */
+            .div_img_position {
+                border: solid #4169e1;
+                width: 400px;
+                height: 260px;
+                background-image: url('../images/coffee.jpg');
+                background-repeat: no-repeat;
+                background-position: 100%;
+            }
+
+            .div_img_position_center {
+                border: solid #4169e1;
+                width: 400px;
+                height: 260px;
+                background-image: url('../images/coffee.jpg');
+                background-repeat: no-repeat;
+                background-position: center;
+            }
         </style>
     </head>
 
@@ -74,6 +249,73 @@
         <p class="ridge">ridge</p>
         <p class="inset">inset</p>
         <p class="outset">outset</p>
+        <h1 class="h1">h1</h1>
+        <h2 class="h2">h2</h2>        
+        <ul class="ul">ul - padding</ul>
+        <div class="div_content">
+            <p class="div_p">padding</p>
+        </div>
+        <br>
+        <div class="div_box">div_box</div>
+        <div class="div_box_sizing">div_box_sizing</div>
+        <h1 class="h_display">h_display</h1>
+
+        <p></p>
+        
+        <div class="div_background"></div>
+
+        <p></p>
+        
+        <div class="div_img"></div>
+        
+        <p></p>
+        
+        <div class="div_img_small"></div>
+        
+        <p></p>
+
+        <div class="div_img_big"></div>
+
+        <p></p>
+
+        <div class="div_img_repeat"></div>
+
+        <p></p>
+
+        <div class="div_img_repeat_x"></div>
+
+        <p></p>
+
+        <div class="div_img_repeat_y"></div>
+
+        <p></p>
+
+        <div class="div_img_repeat_round"></div>
+
+        <p></p>
+
+        <div class="div_img_repeat_space"></div>
+
+        <p></p>
+
+        <div class="div_img_auto"></div>
+
+        <p></p>
+
+        <div class="div_img_cover"></div>
+
+        <p></p>
+
+        <div class="div_img_contain"></div>
+
+        <p></p>
+
+        <div class="div_img_position"></div>
+
+        <p></p>
+
+        <div class="div_img_position_center"></div>
+
     </body>
 
 </html>

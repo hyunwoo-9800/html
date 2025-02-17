@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Type Selector</title>
+        <style>
+            h1[text] {
+                color: #ff0000;
+                background-color: #808080;
+            }
+            p[text] {
+                color: #0000ff;
+                background-color: #ffff00;
+            }
+            h1[text="attr3"] {
+                color: #008000;
+                background-color: #ffc0cb;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 text="attr3">text 속성 이름 선택자</h1>
+        <h1 text="attr2">text 속성 이름 선택자</h1>
+        <p text="attr3">text 속성 이름 선택자</p>
+        <h1 text="attr3">속성과 속성값 선택자</h1>
+    </body>
+
+</html>

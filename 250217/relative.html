@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>relative</title>
+        <style>
+            /* 좌표의 속성에 따라 배치하기 */
+            body{
+                margin: 0;
+                height: 4000px;
+            }
+            .box {
+                width: 100px;
+                height: 100px;
+            }
+
+            .red-box1 {
+                background-color: #ff0000;
+            }
+
+            /* left와 top속성을 이용해 해당 위치를 기준으로 좌푯값 지정 */
+            .green-box1 {
+                background-color: #008000;
+                position: relative;
+                left: 100px;
+                top: 100px;
+            }
+
+            .blue-box1{
+                background-color: #0000ff;
+            }
+
+            .red-box2 {
+                background-color: #ff0000;
+            }
+
+            /* 웹 브라우저 왼쪽 위 모서리를 기준으로 좌푯값 설정 */
+            .green-box2 {
+                background-color: #008000;
+                position: absolute;
+                left: 100px;
+            }
+
+            .blue-box2 {
+                background-color: #0000ff;
+            }
+
+            .red-box3 {
+                background-color: #ff0000;
+            }
+
+            /* 지정된 위치에 고정 */
+            .green-box3 {
+                background-color: #008000;
+                position: fixed;
+                left: 100px;
+            }
+
+            .blue-box3 {
+                background-color: #0000ff;
+            }
+
+            .red-box4 {
+                background-color: #ff0000;
+            }
+
+            /* 임계점에 도달 시 fixed처럼 작동 */
+            .green-box4 {
+                background-color: #008000;
+                position: sticky;
+                top: 10px;
+            }
+
+            .blue-box4 {
+                background-color: #0000ff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="box red-box1"></div>
+        <div class="box green-box1"></div>
+        <div class="box blue-box1"></div>
+        
+        <br>
+        
+        <div class="box red-box2"></div>
+        <div class="box green-box2"></div>
+        <div class="box blue-box2"></div>
+        
+        <br>
+
+        <div class="box red-box3"></div>
+        <div class="box green-box3"></div>
+        <div class="box blue-box3"></div>
+
+        <br>
+
+        <div class="box red-box4"></div>
+        <div class="box green-box4"></div>
+        <div class="box blue-box4"></div>
+    </body>
+
+</html>

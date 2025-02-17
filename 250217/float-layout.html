@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>float-layout</title>
+        <style>
+           div {
+                color: #ffffff;
+            }
+
+            .red-box1 {
+                background-color: #ff0000;
+            }
+            .blue-box1 {
+                background-color: #0000ff;
+            }
+
+            /* 블록 요소를 인라인 요소처럼 배치 */
+            .red-box2 {
+                background-color: #ff0000;
+                 float: left;
+            }
+            .blue-box2 {
+                background-color: #0000ff;
+                float: left;
+            }
+
+            /*  float 속성 사용시의 문제점 */
+            /* 부모요소가 자식 요소의 공간을 제대로 인식 못함 */
+            .container {
+                width: 400px;
+                padding: 1rem;
+                margin: 0 auto;
+                border: 1px solid #000;
+                background-color: #ccc;
+            }
+
+            .box {
+                width: 100px;
+                height: 100px;
+                float: left;
+            }
+            .red-box3 {
+                background-color: #ff0000;
+            }
+            .blue-box3 {
+                background-color: #0000ff;
+            }
+
+            /* 해결법 clear사용 */
+            .red-box4 {
+                background-color: #ff0000;
+                float: left;
+            }
+
+            .green-box4 {
+                background-color: #008000;
+                float: left;
+            }
+
+            .blue-box4 {
+                background-color: #0000ff;
+                clear: left;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="red-box1">red-box1</div>
+        <div class="blue-box1">blue-box1</div>
+
+        <br>
+
+        <div class="red-box2">red-box2</div>
+        <div class="blue-box2">blue-box2</div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="container">
+            <div class="box red-box3">red-box3</div>
+            <div class="box blue-box3">blue-box3</div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="box red-box4">red-box4</div>
+        <div class="box green-box4">green-box4</div>
+        <div class="box blue-box4">blue-box4</div>
+    </body>
+
+</html>
