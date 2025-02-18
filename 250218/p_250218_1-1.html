@@ -10,11 +10,79 @@
 
     <body>
         <form action="#" method="get" id="login_form" class="login_form">
-            <div class="join_div">
-                <p class="join_div_p">자바 활용 데이터 플랫폼 과정</p>
+            <div class="login_div">
+
+                <!-- a태그보다 함수를 사용하는 편이 간단함 > JS파일 작성으로 재사용이 가능하기 때문 -->
+                <div id="btn_group">
+                    <button type="button" id="btn_join" onclick="go_join();">회원가입</button>
+                    <button type="button" id="btn_login" onclick="go_login();">로그인</button>
+                </div>
+
+                <p class="login_div_p">로그인</p>
+
+                <!-- 작성시 class값과 id값은 필수적으로 적어주는게 좋다. -->
+                <input type="email" id="login_EmaliAdress" name="EmaliAdress" placeholder="EmaliAdress"
+                    onblur="email_check()"> <br>
+                <input type="password" id="login_Password" name="Password" placeholder="Password"> <br>
+                <br>
+
+                <!-- 버튼을 누를 시 로그인 체크 함수 호출 -->
+                <button type="button" class="login_button" name="join_button" onclick="login();">로그인</button>
             </div>
         </form>
         <!-- form 종료 -->
     </body>
+
+    <script>
+
+        // 로그인 체크용 함수
+        function login() {
+
+            // id값으로 입력값을 얻어와서 각각의 변수에 저장
+            var email = document.getElementById("login_EmaliAdress").value;
+            var password = document.getElementById("login_Password").value;
+
+            // 입력체크 시작
+            if (email == null || email == "") {
+                alert("이메일을 입력해주세요.");
+                return false;
+            }
+
+            if (password == null || password == "") {
+                alert("비밀번호를 입력해주세요.");
+                return false;
+            }
+
+            // 이메일 형식이며, 패스워드가 입력되어 있다면 문구를 출력
+            if (email_check() == true) {
+                if (password != null && password != "") {
+                    alert(email + "님 환영합니다!");
+                }
+            }
+
+        }
+
+        // input타입 required속성을 대신해서 입력확인을 할 함수
+        // 정규식으로 이메일 형식 체크
+        function email_check() {
+            var email = document.getElementById("login_EmaliAdress").value;
+            var email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+            if (!email_regex.test(email)) {
+                alert("이메일 형식에 맞게 적어주세요.");
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        // 페이지 이동용 함수
+        function go_join() {
+            location.href = 'p_250218_1.html';
+        }
+
+        function go_login() {
+            location.href = 'p_250218_1-1.html';
+        }
+    </script>
 
 </html>

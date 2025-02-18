@@ -1,29 +1,103 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-    <head>
-        <meta charset='utf-8'>
-        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>회원가입</title>
-        <link rel="stylesheet" href="../CSS/join_rogin.css">
-    </head>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../CSS/join_rogin.css">
+</head>
 
     <body>
         <form action="#" method="get" id="join_form" class="join_form">
-               <div class="join_div">
-                <div class="page_load">
-                    <a href="p_250218_1.html">회원 가입</a>
-                    <a href="p_250218_1-1.html">로그인</a>
+            <div class="join_div">
+
+                <!-- a태그보다 함수를 사용하는 편이 간단함 > JS파일 작성으로 재사용이 가능하기 때문 -->
+                <div id="btn_group">
+                    <button type="button" id="btn_join" onclick="go_join();">회원가입</button>
+                    <button type="button" id="btn_login" onclick="go_login();">로그인</button>
                 </div>
+
                 <p class="join_div_p">무료 회원 가입</p>
-                <input type="text" id="EmaliAdress" name="EmaliAdress" placeholder="EmaliAdress"> <br>
-                <input type="password" id="Password" name="Password" placeholder="Password"> <br>
-                <input type="text" id="Conform_EmaliAdress" name="Conform_EmaliAdress" placeholder="Conform_EmaliAdress">
+
+                <!-- 작성시 class값과 id값은 필수적으로 적어주는게 좋다. -->
+                <input type="email" id="EmaliAdress" name="EmaliAdress" placeholder="EmaliAdress" onblur="email_check();">
                 <br>
-                <button type="button" class="join_button" name="join_button">JOIN</button>
+                <input type="password" id="Password" name="Password" placeholder="Password"> <br>
+                <input type="email" id="Conform_EmaliAdress" name="Conform_EmaliAdress" placeholder="Conform_EmaliAdress">
+                <br>
+
+                <!-- 버튼을 누를 시 회원가입 체크 함수 호출 -->
+                <button type="button" class="join_button" name="join_button" onclick="join();">JOIN</button>
             </div>
         </form>
         <!-- form 종료 -->
+
+        <script>
+
+            // 나중에 JS파일 작성해서 나누는 것이 좋음 
+
+            // 회원가입 양식 체크용 함수
+            function join() {
+
+                // id값으로 입력값을 얻어와서 각각의 변수에 저장
+                var email = document.getElementById("EmaliAdress").value;
+                var password = document.getElementById("Password").value;
+                var conform = document.getElementById("Conform_EmaliAdress").value;
+
+                // 입력체크 시작
+                if (email != conform) {
+                    alert("입력한 이메일이 다릅니다.");
+                    return false;
+                }
+
+                if (email == null || email == "") {
+                    alert("이메일을 정확히 입력해주세요.");
+                    return false;
+                }
+
+                if (conform == null || conform == "") {
+                    alert("이메일 확인란이 비어있습니다.");
+                    return false;
+                }
+
+                if (password == null || password == "") {
+                    alert("비밀번호를 정확히 입력해주세요.");
+                    return false;
+                }
+
+                // 이메일이 정확하고, 이메일과 확인란이 동일하고, 패스워드 란이 공백이거나 null값이 아니라면 회원가입 완료
+                if (email_check() == true) {
+                    if ((email == conform && email != null && email != "" && confirm != null && conform != "") && (password != null && password != "")) {
+                        alert("회원가입이 완료되었습니다.")
+                    }
+                }
+
+            }
+
+            // input타입 required속성을 대신해서 입력확인을 할 함수
+            // 정규식으로 이메일 형식 체크
+            function email_check() {
+                var email = document.getElementById("EmaliAdress").value;
+                var email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+                if (!email_regex.test(email)) {
+                    alert("이메일 형식에 맞게 적어주세요.");
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+
+            // 페이지 이동용 함수
+            function go_join() {
+                location.href = 'p_250218_1.html';
+            }
+
+            function go_login() {
+                location.href = 'p_250218_1-1.html';
+            }
+        </script>
+
     </body>
 
 </html>
