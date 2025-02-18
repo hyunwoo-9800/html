@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>Media Query</title>
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: #ff0000;
+            }
+
+            /* 미디어 쿼리를 적용할 수 있는 기기이면서
+            최소 너비가 420px인 경우에만 배경색을 바꿈 */
+            @media only screen and (min-width : 420px) {
+                div {
+                    background-color: #0000ff;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div></div>
+    </body>
+
+</html>

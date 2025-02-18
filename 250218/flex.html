@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>flex</title>
+        <link rel="stylesheet" href="../CSS/flex-basic.css">
+        <style>
+
+            /* row-reverse 주축 방향 오른쪽에서 왼쪽 */
+            /* flex-flow 단축 속성 */
+            /* justify-content 아이템 정렬 속성 */
+            /* align-items 아이템 교차축 방향 정렬 */
+            .flex-container {
+                display: flex;
+                /* flex-direction: row-reverse; */
+                /* flex-flow: column nowrap; */
+                /* justify-content: space-between; */
+                /* align-items: stretch; */
+            }
+
+            /* 아이템을 각각 정렬하고 싶을 때 */
+           /* .flex-item:nth-child(1) {
+                align-self: flex-start;
+            }
+            .flex-item:nth-child(2) {
+                align-self: flex-end;
+            }
+            .flex-item:nth-child(3) {
+                align-self: center;
+            }
+            .flex-item:nth-child(4) {
+                align-self: baseline;
+            }*/
+
+            .flex-container2 {
+                width: 300px;
+                height: 200px;
+                background-color: #c4c4c4;
+                border: 1px solid #000000;
+            }
+            
+            .flex-item2 {
+                color: #ffffff;
+                background-color: #ff5252;
+            }
+            
+            .flex-item2:nth-child(2n) {
+                background-color: #bf5e5e;
+            }
+
+            /* 컨테이너 박스를 벗어날 때의 처리 */
+            .flex-container3 {                
+                display: flex;
+                flex-wrap: wrap;
+                /* flex-flow: column nowrap; */
+            }
+
+            </style>
+    </head>
+
+    <!-- 플렉스 박스 레이아웃 -->
+    <body>
+        <div class="flex-container">
+            <div class="flex-item">item1</div>
+            <div class="flex-item">item2</div>
+            <div class="flex-item">item3</div>
+            <div class="flex-item">item4</div>
+        </div>
+        
+        <p></p>
+        
+        <div class="flex-container2">
+            <div class="flex-item2">item1</div>
+            <div class="flex-item2">item2</div>
+            <div class="flex-item2">item3</div>
+            <div class="flex-item2">item4</div>
+        </div> 
+
+        <p></p>
+        
+        <div class="flex-container3">
+            <div class="flex-item3">item-1</div>
+            <div class="flex-item3">item-2</div>
+            <div class="flex-item3">item-3</div>
+            <div class="flex-item3">item-4</div>
+            <div class="flex-item3">item-5</div>
+            <div class="flex-item3">item-6</div>
+            <div class="flex-item3">item-7</div>
+            <div class="flex-item3">item-8</div>
+            <div class="flex-item3">item-9</div>
+            <div class="flex-item3">item-10</div>
+            <div class="flex-item3">item-11</div>
+
+        </div> 
+
+    </body>
+
+</html>

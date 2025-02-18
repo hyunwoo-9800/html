@@ -1,0 +1,217 @@
+/* 첫 번째 그리드 */
+.grid-container1 {
+  display: grid;
+}
+
+.grid-item1 {
+  color: white;
+  background-color: #008000;
+}
+
+.grid-item1:nth-child(2n) {
+  background-color: #adff2f;
+}
+
+/* 두 번째 그리드 */
+/* columns은 열, rows는 행을 생성 */
+/* auto속성도 가능 */
+
+.grid-container2 {
+  display: grid;
+
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 100px 100px;
+
+  /* repeat속성으로 두 열이나 행의 크기가 같을 때 반복 지정 가능 */
+  /* grid-template-columns: repeat(2, 100px);
+  grid-template-rows: repeat(2, 60px); */
+
+  /* 최소 10px ~ 최대 100px*/
+  /*grid-template-columns: minmax(10px, 100px) 100px;
+  grid-template-rows: minmax(10px, 50px) 50px;*/
+}
+
+.grid-item2 {
+  color: white;
+  background-color: #008000;
+}
+
+.grid-item2:nth-child(2n) {
+  background-color: #adff2f;
+}
+
+/* 세 번째 그리드 */
+.grid-container3 {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 100px 100px;
+  row-gap: 10px;
+  column-gap: 20px;
+}
+
+.grid-item3 {
+  color: white;
+  background-color: #008000;
+}
+
+.grid-item3:nth-child(2n) {
+  background-color: #adff2f;
+}
+
+/* 네 번째 그리드 */
+.grid-container4 {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 100px 100px;
+  row-gap: 10px;
+  column-gap: 20px;
+  /* align-items: start;
+  align-items: end;
+  align-items: stretch;
+  align-items: center; */
+}
+
+.grid-item4 {
+  color: white;
+  background-color: #008000;
+}
+
+.grid-item4:nth-child(2n) {
+  background-color: #adff2f;
+}
+
+/* 다섯 번째 그리드 */
+.grid-container5 {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 100px 100px;
+  justify-items: start;
+}
+
+.grid-item5 {
+  color: white;
+  background-color: #008000;
+}
+
+.grid-item5:nth-child(2n) {
+  background-color: #adff2f;
+}
+
+/* 여섯 번째 그리드 */
+.grid-container6 {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 100px 100px;
+  place-items: center end;
+}
+
+.grid-item6 {
+  color: white;
+  background-color: #008000;
+}
+
+.grid-item6:nth-child(2n) {
+  background-color: #adff2f;
+}
+
+
+/* grid-template.html용 css */
+/* 레이아웃의 행과 열을 이름으로 지정할 수 있다. */
+.grid-container-template {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar content content"
+    "footer footer footer";
+}
+
+#header {
+  grid-area: header;
+  background-color: #008000;
+  color: #ffffff;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  background-color: #adff2f;
+  color: #ffffff;
+}
+
+#content {
+  grid-area: content;
+  background-color: #008000;
+  color: #ffffff;
+}
+
+#footer {
+  grid-area: footer;
+  background-color: #adff2f;
+  color: #ffffff;
+}
+
+
+/* grid-line.html용 css */
+
+.grid-container-line {
+  display: grid;
+  grid-template-areas:
+    "header_line header_line header_line"
+    "sidebar_line content_line content_line"
+    "footer_line footer_line footer_line";
+}
+
+#header_line {
+  grid-area: header;
+  background-color: #008000;
+  color: #ffffff;
+}
+
+#sidebar_line {
+  grid-area: sidebar;
+  background-color: #adff2f;
+  color: #ffffff; 
+}
+
+#content_line {
+  grid-area: content;
+  background-color: #008000;
+  color: #ffffff;
+}
+
+#footer_line {
+  grid-area: footer;
+  background-color: #adff2f;
+  color: #ffffff;
+}
+
+.grid-container-line {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;  
+}
+
+.grid-itme-line:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #ff0000;
+}
+
+.grid-itme-line:nth-child(2) {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  background-color: #b81919;
+}
+
+.grid-itme-line:nth-child(3) {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  background-color: #ffa500;
+}
+
+.grid-itme-line:nth-child(4) {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  background-color: #0000ff;
+}
