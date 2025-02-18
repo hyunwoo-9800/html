@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>transform</title>
+        <style>
+
+            div {
+                text-align: center;
+            }
+
+            div.translate {
+                width: 100px;
+                height: 100px;
+                background-color: #adff2f;
+            }
+
+            /* 마우스가 영역에 위치했을 때, */
+            /* 오른쪽으로 100px, 아래쪽으로 200px만큼 이동 */
+            div.translate:hover {
+                transform: translate(100px, 200px);
+                transition-duration: 3s;
+            }
+
+            div.scale {
+                width: 100px;
+                height: 100px;
+                background-color: #adff2f;
+                margin: 100px;
+            }
+
+            /* 가로로 3배 세로로 2배 커짐 */
+            div.scale:hover {
+                transform: scale(3, 2);
+                transition-duration: 3000ms;
+            }
+
+            div.deg {
+                width: 100px;
+                height: 100px;
+                background-color: #adff2f;
+                margin: 20px;
+            }
+
+            /* x, y축으로 30도 기울이기 */
+            div.deg:hover {
+                transform: skew(-30deg, -30deg);
+                transition-duration: 3000ms;
+            }
+
+            .container {
+                border: 1px solid #000000;
+                display: inline-block;
+                margin: 200px;
+            }
+
+            div.box {
+                width: 100px;
+                height: 100px;
+                background-color: #daa520;
+            }
+
+            /* 회전하기 */
+            div.box:hover {
+                transform: rotate(30deg);
+                transition-duration: 1000ms;
+            }
+
+            .container_orgin {
+                border: 1px solid #000000;
+                display: inline-block;
+                margin: 200px;
+            }
+
+            div.box_orgin {
+                width: 100px;
+                height: 100px;
+                background-color: #daa520;
+            }
+
+            /* 회전하기 */
+            /* 기준점 지정해서 회전 */
+            div.box_orgin:hover {
+                transform: rotate(30deg);
+                transform-origin: top left;
+                transition-duration: 1000ms;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- 이동 -->
+        <div class="translate">이동</div>
+
+        <p></p>
+
+        <!-- 확대 -->
+        <div class="scale">확대</div>
+
+        <p></p>
+
+        <!-- 기울임 -->
+        <div class="deg">기울이기</div>
+
+        <p></p>
+
+        <!-- 회전 -->
+        <div class="container">
+            <div class="box">오른쪽으로 회전</div>
+        </div>
+        
+        <!-- 회전 -->
+        <div class="container_orgin">
+            <div class="box_orgin">왼쪽 위 모서리를 기준점으로 회전</div>
+        </div>
+
+    </body>
+
+</html>

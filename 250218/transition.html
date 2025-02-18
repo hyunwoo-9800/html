@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>Transition</title>
+        <style>
+            .red-box {
+                width: 100px;
+                height: 100px;
+                background-color: #ff0000;
+            }
+
+            .red-box:hover {
+                background-color: #0000ff;
+            }
+
+            .delay-box {
+                width: 100px;
+                height: 100px;
+                background-color: #ff0000;
+                transition-property: background-color, color, width;
+                transition-duration: 10s, 500ms, 2s;
+            }
+
+            .delay-box:hover {
+                background-color: #0000ff;
+            }
+
+            .transition_delay-box {
+                width: 100px;
+                height: 100px;
+                background-color: #ff0000;
+                transition-property: background-color, color, width;
+                transition-duration: 10s, 500ms, 2s;
+                transition-delay: 3s;
+            }
+
+            .transition_delay-box:hover {
+                background-color: #0000ff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- div영역에 마우스를 올리면 색이 변하는걸 확인 -->
+        <div class="red-box"></div>
+        
+        <p></p>
+        
+        <!-- div영역에 마우스를 올리면 색이 지정한 시간에 걸쳐 바뀌는 것을 확인 -->
+        <div class="delay-box"></div>
+
+        <p></p>
+        
+        <!-- 전환 효과의 지연 -->
+        <div class="transition_delay-box"></div>
+    </body>
+
+</html>

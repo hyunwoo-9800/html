@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>animation-play-state</title>
+        <style>
+            /* animation-name이름이 밑에 애니메이션 효과를 줄 키프레임에 이름 */
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: #ff0000;
+                position: relative;
+                animation-name: move;
+                animation-duration: 10000ms;
+                animation-fill-mode: forwards;
+                animation-play-state: paused;
+            }
+
+            /* 애니메이션 효과 */
+            @keyframes move {
+                from {
+                    left: 0;
+                }
+
+                to {
+                    left: 300px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div></div>
+        <button id="start">start</button>
+        <button id="paused">paused</button>
+        <button onClick="window.location.reload()">reload</button>
+
+        <script>
+            const box = document.querySelector("div");
+            document.getElementById("start").addEventListener("click", function () {
+                box.style.animationPlayState = "running";
+            });
+            document.getElementById("paused").addEventListener("click", function () {
+                box.style.animationPlayState = "paused";
+            });
+        </script>
+
+    </body>
+
+</html>

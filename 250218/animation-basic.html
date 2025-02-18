@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>animation</title>
+        <style>
+
+            /* animation-name이름이 밑에 애니메이션 효과를 줄 키프레임에 이름 */
+            div {
+                width: 100px;
+                height: 100px;
+                border-color: #ff0000;
+                animation-name: bgchange;
+                animation-duration: 5000ms;
+                /* animation-delay: 5000ms; */
+                animation-fill-mode: forwards; 
+                animation-iteration-count: 3;
+                animation-direction: reverse;
+            }
+
+            a:link {
+                text-decoration: none;
+            }
+
+            /* 애니메이션 효과 */
+            /* keyframes, animation-name, animation-duration 3가지 속성이 반드시 필요함 */
+            /* 애니메이션이 진행되는 과정 중에 0, 25, 50, 100%시점에 배경색을 변경 */
+            @keyframes bgchange {
+                0% {
+                    background-color: #ff0000;
+                }
+
+                25% {
+                    background-color: #ffa500;
+                }
+
+                50% {
+                    background-color: #ffff00;
+                }
+
+                100% {
+                    background-color: #008000;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div></div>
+
+        <p></p>
+
+        <a href="animation-basic.html">다시보기</a>
+    </body>
+
+</html>
