@@ -70,7 +70,7 @@
 }
 
 /* 입력 영역 크기 조정 */
-#EmaliAdress, #Password, #Conform_EmaliAdress {
+#EmaliAdress, #Password, #Conform_Password {
     border-radius: 5px;
     width: 350px;
     padding: 7px;
