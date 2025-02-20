@@ -30,17 +30,24 @@
 }
 
 /* 링크 이동용 버튼 그룹 */
-#btn_group button {
+ #btn_group button {
     border: 1px solid  #8a2be2;
     background-color: #404744;
     color: #ffffff;
     padding: 5px;
 }
 
-#btn_group button:hover {
+/* #btn_group button:hover {
     color: white;
     background-color: #7202aa;
-}
+} */
+
+/* 2025/02/20 추가*/
+/* 회원가입 화면일때만 회원가입 버튼 색 진하게 처리*/
+ #join_form #btn_group #btn_join {
+    color: white;
+    background-color: #8a2be2;
+} 
 
 /* 회원가입 버튼 */
 #btn_join {
@@ -70,7 +77,7 @@
 }
 
 /* 입력 영역 크기 조정 */
-#EmaliAdress, #Password, #Confirm_Password {
+#emailAdress, #pwd, #confirm_pwd {
     border-radius: 5px;
     width: 350px;
     padding: 7px;
@@ -120,17 +127,25 @@
 }
 
 /* 링크 이동용 버튼 그룹 */
-#btn_group button {
+ #btn_group button {
     border: 1px solid  #8a2be2;
     background-color: #404744;
     color: #ffffff;
     padding: 5px;
 }
 
-#btn_group button:hover {
+/* #btn_group button:hover {
     color: white;
     background-color: #7202aa;
-}
+} */
+
+/* 2025/02/20 추가*/
+/* 로그인 화면일때만 로그인 버튼 색 진하게 처리*/
+#login_form #btn_group #btn_login {
+    color: white;
+    background-color: #8a2be2;
+} 
+
 
 /* 회원가입 버튼 */
 #btn_join {
@@ -160,7 +175,7 @@
 }
 
 /* 입력 영역 크기 조정 */
-#login_EmaliAdress, #login_Password {
+#login_emaliadress, #login_pwd {
     border-radius: 5px;
     width: 350px;
     padding: 7px;

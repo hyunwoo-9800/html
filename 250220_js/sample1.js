@@ -1,6 +1,6 @@
-const input = prompt("inch 단위의 숫자를 입력하세요.");
+let input = prompt("inch 단위의 숫자를 입력하세요.");
 
-const inchVal = Number(input);
+let inchVal = Number(input);
 
 let cm = inchVal * 2.54;
 

@@ -21,10 +21,11 @@
                 <p class="join_div_p">무료 회원 가입</p>
 
                 <!-- 작성시 class값과 id값은 필수적으로 적어주는게 좋다. -->
-                <input type="email" id="EmaliAdress" name="EmaliAdress" placeholder="EmaliAdress *" onblur="email_check();">
+                <input type="email" id="emailAdress" name="emailAdress" placeholder="emailAdress *" onblur="email_check();">
                 <br>
-                <input type="password" id="Password" name="Password" placeholder="Password *"> <br>
-                <input type="password" id="Confirm_Password" name="Confirm A Password" placeholder="Confirm A Password *">
+                <input type="password" id="pwd" name="pwd" placeholder="Password *"> <br>
+                <input type="password" id="confirm_pwd" name="confirm_pwd" 
+                placeholder="Confirm A Password *">
                 <br>
 
                 <!-- 버튼을 누를 시 회원가입 체크 함수 호출 -->
@@ -41,9 +42,9 @@
             function join() {
 
                 // id값으로 입력값을 얻어와서 각각의 변수에 저장
-                var email = document.getElementById("EmaliAdress").value;
-                var password = document.getElementById("Password").value;
-                var confirm = document.getElementById("Confirm_Password").value;
+                var email = document.getElementById("emailAdress").value;
+                var password = document.getElementById("pwd").value;
+                var confirm = document.getElementById("confirm_pwd").value;
 
                 // 입력체크 시작
                 if (email == null || email == "") {
