@@ -79,7 +79,7 @@
             // input타입 required속성을 대신해서 입력확인을 할 함수
             // 정규식으로 이메일 형식 체크
             function email_check() {
-                var email = document.getElementById("EmaliAdress").value;
+                var email = document.getElementById("emailAdress").value;
                 var email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
                 if (!email_regex.test(email)) {
                     alert("이메일 형식에 맞게 적어주세요.");
