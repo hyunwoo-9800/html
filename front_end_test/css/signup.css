@@ -1,0 +1,100 @@
+/* 회원가입용 CSS(signup.html) */
+
+/* body전체의 배경색 */
+body {
+    background-color: #008b8b;
+}
+
+/* 폼태그의 사이즈 */
+#join_form {
+    width: 500px;
+    margin: 0 auto;
+    max-width: 500px;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+
+    /* 전체 높이 위에서부터 절반 */
+    top: 50%;
+
+    /* 전체 넓이 왼쪽에서부터 절반 */
+    left: 50%;
+
+    /* 해당 요소의 높이, 넓이의 절반만큼 돌아가기 */
+    transform: translate(-50%, -50%);
+}
+
+/* 전체 div영역 */
+.join_div {
+    align-items: center;
+    width: 500px;
+    height: 550px;
+    background-color: #006400;
+    text-align: center;
+}
+
+/* 링크 이동용 버튼 그룹 */
+ #btn_group button {
+    border: 1px solid  #adff2f;
+    background-color: #006400;
+    color: #ffffff;
+    padding: 10px;
+}
+
+
+#join_form #btn_group #btn_join {
+    color: white;
+    background-color: #adff2f;
+} 
+
+/* 회원가입 버튼 */
+#btn_join {
+    font-size: medium;
+    margin-right: -4px;
+    margin-top: 20px;
+    width: 200px;
+}
+
+/* 로그인 버튼 */
+#btn_login {
+    font-size: medium;
+    margin-left: -3px;
+    margin-top: 20px;
+    width: 200px;
+}
+
+/* 화면에 보여지는 p태그 */
+.join_div_p {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* 입력 영역 크기 조정 */
+#emailAddress, #pwd, #confirm_pwd {
+    border: 1px solid  gray;
+    width: 400px;
+    padding: 10px;
+    margin: 30px;
+    background-color: #006400;
+}
+
+/* 입력란 클릭시 색상변경 */
+input:focus {
+    color: #000000;
+    background-color: #ffffff !important;
+}
+
+/* GET STARTED버튼 크기 조정 */
+.join_button {
+    /* border-radius: 5px; */
+    width: 420px;
+    padding: 10px;
+    margin: 30px;
+    background-color: #adff2f;
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    color: #ffffff;
+    
+}

@@ -1,0 +1,39 @@
+/* 초기화면용 CSS(main.html) */
+
+/* body 전체에 배경색 */
+body {
+    background-color: #008b8b;
+}
+
+/* 출력될 div태그 css */
+#main_box {
+    width: 400px;
+    height: 75px;
+    background-color: #008000;
+    margin: 0 auto;
+    max-width: 450px;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+
+    /* 전체 높이 위에서부터 절반 */
+    top: 50%;
+
+    /* 전체 넓이 왼쪽에서부터 절반 */
+    left: 50%;
+
+    /* 해당 요소의 높이, 넓이의 절반만큼 돌아가기 */
+    transform: translate(-50%, -50%);
+
+    /* 폰트 컬러 */
+    color: #ffffff;
+    font-size: xx-large;
+    text-align: center;
+    line-height: 75px;
+
+    border-radius: 25px;
+
+    /* 애니메이션 효과 */
+    transition-property: background-color, color, width;
+    transition-duration: 3s, 3s, 3s;
+}
