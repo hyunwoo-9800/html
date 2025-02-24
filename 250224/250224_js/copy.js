@@ -7,14 +7,3 @@ num = 100;
 console.log("num = " + num);
 console.log("num2 = " + num2);
 console.log("copyNum = " + copyNum);
-
-
-const studentObj = {
-    name : "John",
-    age : 20,
-};
-
-studentObj.gender = "female";
-delete studentObj.age;
-
-console.log(studentObj);

@@ -1,16 +1,19 @@
 // 변수 호이스팅 
 
-// console.log(num);
-// var num = 10;
-// console.log(num);
+// var 변수는 에러가 안남, 4 ~ 6행과 9 ~ 11행은 같은 의미
+console.log(num_var);
+var num_var = 10;
+console.log(num_var);
 
 
-// var num;
-// console.log(num);
-// num = 10;
+var num_var;
+console.log(num_var);
+num_var = 10;
 
-// console.log(num);
-// let num = 10;
+// let변수는 호이스팅이 되지 않음
+// console.log(num_let);
+// let num_let = 10;
+
 
 // 함수 호이스팅(함수 선언문으로 만든 함수 일 경우)
 printHello();

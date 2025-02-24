@@ -1,3 +1,4 @@
+// 객체 다루기
 const person = {
 
     name: {
