@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>query</title>
+    </head>
+
+    <body>
+        <div class="box-1">
+            <p class="text">text - 1</p>
+            <p class="text">text - 2</p>
+        </div>
+        <div class="box-2">
+            <p class="text">text - 3</p>
+            <p class="text">text - 4</p>
+        </div>
+
+        <!-- js 시작 -->
+        <script>
+
+            const el = document.querySelector(".box-1");
+            console.log("el = " , el);
+            alert("el = " , el);
+            
+            const el1 = document.getElementsByClassName("box-1")[0].children;
+            console.log("el1 = " , el1);
+            alert("el1 = " , el1);
+
+            const el2 = document.querySelectorAll(".box-2 .text");
+            console.log("el2 = " , el2);
+            alert("el2 = " , el2);
+            
+        </script>
+        <!-- js 종료 -->
+
+    </body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>content</title>
+        <style>
+
+            .style1 {
+                color: #ffffff;
+                background-color: #8a2be2;
+                font-size: 30px;
+                font-weight: bold;
+                line-height: 1;
+            }
+
+            .style-size {
+                color: #9acd32;
+                font-size: 140px;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+
+        <p id="title">Hello,<span style="display: none;">JavaScript</span></p>
+        <p id="textContent"></p>
+        <p id="innerText"></p>
+        <p id="innerHTML"></p>
+
+        <h1 id="h1">Hello, World!</h1>
+        <h2 id="h2">Hello, JavaScript!</h2>
+
+        <!-- js 시작 -->
+        <script>
+
+            // 요소에 저장된 값 확인용
+            console.log("textContent = ", document.getElementById("title").textContent);
+            console.log("innerText = ", document.getElementById("title").innerText);
+            console.log("innerHTML = ", document.getElementById("title").innerHTML);
+
+            // 요소 값 조작
+            // 두개는 태그를 인식하지 않음 > 값만 조작 가능
+            document.getElementById("textContent").textContent = "<strong>안녕하세요</strong>";
+            document.getElementById("innerText").innerText = "<strong>hello</strong>";
+
+            // innerHTML은 태그를 인식함
+            document.getElementById("innerHTML").innerHTML = "<strong>hi</strong>";
+
+            // h1태그 색깔 바꾸기
+            var h1 = document.querySelector("h1");
+            h1.style.color = "#ffffff";
+            h1.style.backgroundColor = "#0000ff";
+            h1.style.fontSize = "30px";
+
+            // h2태그 색깔 바꾸기
+            var h2 = document.querySelector("h2");
+            h2.classList.add("style1");
+            h2.classList.add("style-size");
+
+            // 스타일 초마다 변경
+            setInterval(function () {
+                h2.classList.toggle("style1");
+                h2.classList.toggle("style-size");
+            }, 3000);
+
+        </script>
+        <!-- js 종료 -->
+
+    </body>
+
+</html>

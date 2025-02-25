@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>요소 노드 선택하기</title>
+    </head>
+
+    <body>
+        <h1 id="title">title</h1>
+        <p class="text">text - 1</p>
+        <p class="text">text - 2</p>
+
+        <!-- js -->
+        <script>
+            const el = document.getElementById("title");
+            alert("el = " , el);
+            console.log("el = " , el);
+                        
+            const classEl = document.getElementsByClassName("text");
+            alert("classEl = " , classEl);
+            alert("classEl[0] = " , classEl[0]);
+            alert("classEl[1] = " , classEl[1]);
+            console.log("classEl = " , classEl);
+            console.log("classEl[0] = " , classEl[0]);
+            console.log("classEl[1] = " , classEl[1]);
+            
+            const tagEls = document.getElementsByName("p");
+            alert("tagEls = " , tagEls);
+            console.log("tagEls = " , tagEls);
+        </script>
+        <!-- js 종료 -->
+
+    </body>
+
+</html>
