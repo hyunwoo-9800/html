@@ -1,3 +1,4 @@
+/* headdr.html css */
 * {
     margin: 0;
     padding: 0;
@@ -21,8 +22,9 @@ li {
 }
 
 header {
-    position: absolute;
-    color: #000000;
+    /* position: absolute; */
+    position: fixed;
+    color: #ffffff;
     top: 0;
     z-index: 1;
     width: 100%;
@@ -48,6 +50,7 @@ header button {
     background: transparent;
     border: 0;
     cursor: pointer;
+    color: #ffffff;
 }
 
 header h1 button {
@@ -56,5 +59,6 @@ header h1 button {
 }
 
 header nav ul li button {
+    color: #ffffff;
     font-size: 1.2rem;
 }
