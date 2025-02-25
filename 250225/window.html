@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>window 객체 속성</title>
+        <style>
+
+            /* 웹 브라우저에 스크롤을 생기게 하기 위해 body 태그에 너이, 높이 추가 */
+            body{ 
+              width:2500px;
+              height:5000px;
+            }
+
+            /* 스크롤 되어도 버튼이 따라다니게 하기 위해 fixed 속성값 추가 */
+            button{
+              position:fixed;
+              left:10px;
+              top:10px;
+            }
+
+          </style>
+    </head>
+
+    <body>
+
+        <!-- 버튼 -->
+        <button onclick="printInfo();">window 객체 속성</button>
+        
+        <!-- js -->
+        <script>
+
+            //  window 객체 속성확인용
+            function printInfo() {
+
+                console.log("웹 브라우저의 너비 = " + window.innerWidth);
+                console.log("웹 브라우저의 높이 = " + window.innerHeight);
+                console.log("웹 브라우저의 창의 너비 = " + window.outerWidth);
+                console.log("웹 브라우저의 창의 높이 = " + window.outerHeight);
+                console.log("웹 브라우저의 창 위쪽 면과 모니터 사이의 간격 = " + window.screenTop + "/" + window.screenY);
+                console.log("웹 브라우저의 창 왼쪽 면과 모니터 사이의 간격 = " + (window.screenLeft + "/" + window.screenX));
+                console.log("웹 브라우저의 창의 스크롤 가로 위치 = " + window.scrollX);
+                console.log("웹 브라우저의 창의 스크롤 세로 위치 = " + window.scrollY);
+
+            }
+
+        </script>
+        <!-- js 종료 -->
+         
+    </body>
+
+</html>
