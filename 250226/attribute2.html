@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>attribute</title>
+
+        <style>
+
+            .yellowgreen {
+                color: #9acd32;
+            }
+
+            .red {
+                color: #ff0000;
+            }
+        </style>
+
+    </head>
+
+    <!-- 메서드로 속성 조작 -->
+    <body>
+
+        <!-- 사용자 지정 속성 추가 -->
+        <a href="http://www.gilbut.co.kr" data-link="길벗" class="yellowgreen">길벗</a>
+
+        <!-- js 시작 -->
+        <script>
+
+            // a태그 정보 가져오기
+            const aEl = document.querySelector("a");
+
+            // 사용자 지정 속성 바꾸기
+            aEl.setAttribute("data-link", "이지톡");
+
+            // a태그에 클래스 속성 추가
+            // aEl.setAttribute("class", "red");
+
+            // 속성 없애기
+            // aEl.removeAttribute("class");
+
+        </script>
+        <!-- js 종료 -->
+
+    </body>
+
+</html>

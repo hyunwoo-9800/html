@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>form_element</title>
+    </head>
+
+    <!-- form 요소 선택하기 -->
+    <body>
+
+        <form action="#" name="frm1">
+
+            <label for="uname">이름</label>
+            <input type="text" name="uname" placeholder="uname" onblur="read_uname();">
+
+            <p></p>
+
+            <label for="password">비밀번호</label>
+            <input type="password" name="password" placeholder="password" onblur="read_password();">
+
+            <p></p>
+
+            <label for="age">나이</label>
+            <input type="text" name="age" placeholder="age" onblur="read_age();">
+
+            <p></p>
+
+            <label for="gender">성별</label>
+            <select name="gender" id="gender" onblur="read_gender();">
+                <option value="male">남자</option>
+                <option value="female">여자</option>
+            </select>
+
+            <p></p>
+
+            <textarea name="story" id="story" onblur="read_textArea();">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolor quas nulla unde ea officiis?
+                </textarea>
+
+            <p></p>
+
+            <h2>좋아하는 과일</h2>
+            <label><input name="fruit" type="checkbox" value="apple" onblur="read_furit();">사과</label>
+            <label><input name="fruit" type="checkbox" value="banana" onblur="read_furit();">바나나</label>
+            <label><input name="fruit" type="checkbox" value="strawberry" onblur="read_furit();">딸기</label>
+            <label><input name="fruit" type="checkbox" value="mango" onblur="read_furit();">망고</label>
+            <label><input name="fruit" type="checkbox" value="orange" onblur="read_furit();">오렌지</label>
+
+            <p></p>
+
+            <h2>싫어하는 과목</h2>
+            <label><input name="study" type="radio" value="국어" onblur="read_study();">국어</label>
+            <label><input name="study" type="radio" value="수학" onblur="read_study();">수학</label>
+            <label><input name="study" type="radio" value="영어" onblur="read_study();">영어</label>
+            <label><input name="study" type="radio" value="과학" onblur="read_study();">과학</label>
+            <label><input name="study" type="radio" value="체육" onblur="read_study();">체육</label>
+
+            <p></p>
+
+            <h2>파일 추가</h2>
+            <label><input name="file" type="file" value="file" onblur="read_file();"></label>
+            <p></p>
+
+            <button type="submit">전송</button>
+
+        </form>
+        <!-- form 종료 -->
+
+        <!-- js 시작 -->
+        <script>
+
+            // 폼 요소 정보 확인용 
+            // console.log(document.frm1.elements);
+            // console.log(document.frm1.elements[0]);
+            // console.log(document.frm1.elements["uname"]);
+            // console.log(document.frm1.uname);
+
+            // 입력한 값이 바뀌었을때 콘솔로 출력
+            function read_uname() {
+
+                console.log("이름 = " + document.frm1.uname.value);
+
+            }
+
+            function read_password() {
+
+                console.log("비밀번호 = " + document.frm1.password.value);
+
+            }
+
+            function read_age() {
+
+                console.log("나이 = " + document.frm1.age.value);
+
+            }
+
+            function read_gender() {
+
+                console.log("성별 = " + document.frm1.gender.value);
+            }
+
+            function read_textArea() {
+
+                console.log("textarea = " + document.frm1.story.value);
+            }
+
+            function read_furit() {
+                const cEls = document.querySelectorAll('[type="checkbox"]');
+                for (let i = 0; i < cEls.length; i++) {
+
+                    if (cEls[i].checked === true) {
+
+                        console.log("선택한 과일 = ", cEls[i].value);
+                        console.log("\n");
+
+                    }
+
+                }
+            }
+
+            function read_study() {
+                const cEls = document.querySelectorAll('[type="radio"]');
+                for (let i = 0; i < cEls.length; i++) {
+
+                    if (cEls[i].checked === true) {
+
+                        console.log("선택한 과목 = ", cEls[i].value);
+
+                    }
+
+                }
+            }
+
+            function read_file() {
+                
+                const filesObj = document.frm1.file.files;
+                console.log(filesObj);
+                
+            }
+
+            // form요소 값 조작
+            // document.frm1.uname.value = "바보";
+            // document.frm1.password.value = "9999";
+            // document.frm1.age.value = "0.1";
+            // document.frm1.story.value = "가나다라마바사아";
+
+            // 값이 바뀐지 확인하기
+            // console.log("이름 = " + document.frm1.uname.value);
+            // console.log("비밀번호 = " + document.frm1.password.value);
+            // console.log("나이 = " + document.frm1.age.value);
+            // console.log("성별 = " + document.frm1.gender.value);
+            // console.log("textarea = " + document.frm1.story.value);
+
+            // 체크박스 값 확인
+            // console.log(document.frm1.fruit[0].value);
+            // console.log(document.frm1.study[0].value);
+
+            // const cEls = document.querySelectorAll("[type='checkbox']");
+            // for (let i = 0; i < cEls.length; i++) {
+
+            //     if (cEls[i].checked === true) {
+
+            //         console.log("선택한 과일 = ", cEls[i].value);
+            //         console.log("\n");
+
+
+            //     }
+            // if 종료
+
+            // 체크된 값은 체크 해제
+            // 체크 해제 된 값은 체크
+            // if (cEls[i].checked) {
+
+            //     cEls[i].checked = false;
+
+            // } else {
+
+            //     cEls[i].checked = true;
+
+            // }
+            // else if 종료
+
+            // }
+            // for 종료
+
+            // 라디오박스 값 확인
+            // const cEls = document.querySelectorAll("[type='radio']");
+            // for (let i = 0; i < cEls.length; i++) {
+
+            //     if (cEls[i].checked === true) {
+
+            //         console.log("선택한 과목 = ", cEls[i].value);
+            //         console.log("\n");
+
+
+            //     } // if 종료
+
+            // // 체크된 값은 체크 해제
+            // // 체크 해제 된 값은 체크
+            // if (cEls[i].checked) {
+
+            //     cEls[i].checked = false;
+
+            // } else {
+
+            //     cEls[i].checked = true;
+
+            // } // else if 종료
+
+            // } // for 종료
+
+            // 콤보박스 값 변경
+            // const comboEls = document.querySelectorAll("option");
+
+            // for (let i = 0; i < comboEls.length; i++) {
+
+            //     if (comboEls[i].selected === true) {
+            //         console.log("선택한 성별은?" , comboEls[i].value);
+            //         console.log("선택한 성별은?" , comboEls[i].selected);
+
+            //     } // if 종료
+
+            // } // for 종료
+
+        </script>
+        <!-- js 종료 -->
+    </body>
+
+</html>

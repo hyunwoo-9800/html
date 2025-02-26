@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>remove</title>
+</head>
+
+<!-- 노드의 삭제 -->
+
+<body>
+    <p>Text</p>
+    <a href="https://www.naver.com">네이버</a>
+    <a href="https://www.google.com">구글</a>
+
+    <!-- js 시작 -->
+    <script>
+
+        // p태그 노드 삭제
+        //  const pEl = document.querySelector("p");
+        //  pEl.parentNode.removeChild(pEl);
+
+        // a태그에 포함된 요소 전부 삭제
+        const childNodes = document.body.childNodes;
+        childNodes.forEach((node) => {
+
+            console.log("nodeName = " , node.nodeName);
+            console.log("node = " , node);
+            
+            // p태그의 요소 삭제
+            if (node.nodeName === "P") {
+                node.parentNode.removeChild(node);
+            }
+
+            // a태그의 요소 삭제
+            if (node.nodeName === "A") {
+                node.parentNode.removeChild(node);
+            }
+        })
+
+    </script>
+    <!-- js 종료 -->
+
+</body>
+
+</html>

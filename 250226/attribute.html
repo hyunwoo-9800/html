@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>attribute</title>
+    </head>
+
+    <!-- 메서드로 속성 조작 -->
+    <body>
+
+        <a href="http://www.gilbut.co.kr">길벗</a>
+
+        <!-- js 시작 -->
+        <script>
+
+            // a태그 정보 가져오기
+            const aEl = document.querySelector("a");
+
+            // href 속성 정보 가져오기
+            const pHerf = aEl.getAttribute("href");
+
+            // 출력
+            console.log("pHref = " + pHerf); 
+            
+            // a태그의 herf속성의 값 바꾸기
+            aEl.setAttribute("href", "https://www.naver.com");
+            
+            // a태그의 텍스트 바꾸기
+            aEl.innerText = "네이버";
+            
+            // a태그의 herf속성의 값 바꾸기 > 새창으로 열리게
+            aEl.setAttribute("target", "_balnk");
+
+        </script>
+        <!-- js 종료 -->
+
+    </body>
+
+</html>

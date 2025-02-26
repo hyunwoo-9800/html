@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>node</title>
+    </head>
+
+    <!-- 노드의 추가 -->
+    <body>
+
+        <!-- js 시작 -->
+        <script>
+
+            // a태그 요소 만들기
+            const aEl = document.createElement("a");
+
+            // 생성한 요소 연결하기(바디태그에 연결)
+            document.body.appendChild(aEl);
+
+            // a태그에 텍스트 추가
+            const txtEl = document.createTextNode("네이버");
+            document.querySelector("a").appendChild(txtEl);
+
+            // a태그에 href 속성 추가
+            const hrefAttr = document.createAttribute("href");
+            hrefAttr.value = "https://www.naver.com";
+
+            // href 속성을 추가하는 방법
+            document.querySelector("a").setAttributeNode(hrefAttr);
+            //aEl.setAttribute("href", hrefAttr.value)
+
+        </script>
+        <!-- js 종료 -->
+
+    </body>
+
+</html>
