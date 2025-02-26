@@ -24,16 +24,16 @@
                 <nav>
                     <ul>
                         <li>
-                            <button>About</button>
+                            <button onclick="go_about();">About</button>
                         </li>
                         <li>
-                            <button>Features</button>
+                            <button onclick="go_features();">Features</button>
                         </li>
                         <li>
-                            <button>Portifolio</button>
+                            <button onclick="go_portifolio();">Portifolio</button>
                         </li>
                         <li>
-                            <button>Contact</button>
+                            <button onclick="go_contact();">Contact</button>
                         </li>
                     </ul>
                 </nav>
@@ -48,6 +48,25 @@
         <script src="../js/scroll.js"></script>
         <script src="../js/scroll_request.js"></script>
         <script src="../js/move.js"></script>
+
+        <script>
+
+            function go_about() {
+                location.href = "about_me.html";
+            }
+
+            function go_features() {
+                location.href = "what_i_do.html";
+            }
+
+            function go_portifolio() {
+                location.href = "portfolio.html";
+            }
+
+            function go_contact() {
+                location.href = "contact_with_me.html";
+            }
+        </script>
          
     </body>
 
