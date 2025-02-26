@@ -17,7 +17,7 @@
             <div class="container">
 
                 <h1>
-                    <button>SU</button>
+                    <button onclick="go_main();">SU</button>
                 </h1>
 
                 <!-- nav 태그 -->
@@ -45,11 +45,11 @@
         </header>
         <!-- header 끝 -->
 
-        <script src="../js/scroll.js"></script>
-        <script src="../js/scroll_request.js"></script>
-        <script src="../js/move.js"></script>
-
         <script>
+
+            function go_main() {
+                location.href = "main.html";
+            }
 
             function go_about() {
                 location.href = "about_me.html";
