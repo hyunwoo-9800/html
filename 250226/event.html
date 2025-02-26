@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>event</title>
+    </head>
+
+    <body>
+
+        <form action="#" method="get" name="eventForm">
+
+            <!-- focus, blur 이벤트 -->
+            <input type="text" name="txtName" onfocus="focusEvent();" onblur="blurEvent();">
+
+            <p></p>
+
+            <!-- 프로퍼티 리스너 방식 이벤트 -->
+            <button type="button">프로퍼티 리스너 방식</button>
+
+            <p></p>
+
+            <!-- 화살표 함수 사용 -->
+            <button type="button" id="arrow">화살표 함수 사용</button>
+
+            <p></p>
+
+            <!-- 이벤트 등록 메서드 -->
+            <button type="button" id="listener">이벤트 등록 메서드</button>
+
+            <p></p>
+
+            <!-- 이벤트 등록 메서드(화살표 함수) -->
+            <button type="button" id="listener_arrow">이벤트 등록 메서드 화살표 함수</button>
+
+            <p></p>
+
+            <!-- onclick 이벤트 -->
+            <button type="submit" onclick="clickEvent();">클릭</button>
+
+            <p></p>
+
+        </form>
+        <!-- form 종료 -->
+
+        <script>
+
+            // 버튼 클릭시 경고창
+            function clickEvent() {
+                alert("클릭");
+            }
+
+            // focus시
+            function focusEvent() {
+                console.log("입력하세요.");
+                return false;
+            }
+
+            // focus out시
+            function blurEvent() {
+                console.log("focus out!");
+                return false;
+            }
+
+            // 프로퍼티 리스너
+            const btnEl = document.querySelector("button");
+            btnEl.onclick = function () {
+                alert("프로퍼티 리스너 방식");
+            }
+
+            // 프로퍼티 리스너 화살표 함수
+            var btnEl_arrow = document.getElementById("arrow");
+            btnEl_arrow.onclick = () => {
+                alert("화살표 함수!");
+            }
+
+            // 이벤트 등록 메서드 사용
+            var btnEl_listener = document.getElementById("listener");
+
+            btnEl_listener.addEventListener("click", function () {
+                alert(" 이벤트 등록 메서드");
+            });
+
+            // 이벤트 등록 메서드 화살표 함수 사용
+            var btnEl_listener_arrow = document.getElementById("listener_arrow");
+
+            const clickEvent_arrow = () => {
+                alert("이벤트 등록 메서드 화살표 함수");
+            }
+
+            listener_arrow.addEventListener("click", clickEvent_arrow);
+            
+        </script>
+    </body>
+
+</html>

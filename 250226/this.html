@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>this</title>
+    </head>
+
+    <body>
+
+        <form action="#" method="get" name="eventForm">
+
+            <p>삼성</p>
+            <p>애플</p>
+            <p>구글</p>
+
+        </form>
+        <!-- form 종료 -->
+
+        <script>
+
+            // this 키워드 확인
+            var pEls = document.querySelectorAll("p");
+            // pEls.forEach((el) => {
+
+            //     el.addEventListener("click", function () {
+
+            //         console.log("this가 누구?", this);
+
+            //         // this를 사용하여 스타일 바꾸기
+            //         if (this.style.color === "black") {
+
+            //             this.style.color = "yellowgreen";
+
+            //         } else {
+
+            //             this.style.color = "black";
+
+            //         } // else if 끝
+
+            //     }); // 함수 끝
+
+            // }); // foreach 끝
+
+            // 익명함수 화살표로 바꿀 시 this의 범위가 바뀜
+            pEls.forEach((el) => {
+
+                el.addEventListener("click", (e) =>{
+
+                    // 화살표 함수를 사용할거면 target속성 쓰기(함수 매개변수에 e도 적어야 함)
+                    console.log("this가 누구?", e.target);
+
+                    // this를 사용하여 스타일 바꾸기
+                    if (e.target.style.color === "black") {
+
+                        e.target.style.color = "yellowgreen";
+
+                    } else {
+
+                        e.target.style.color = "black";
+
+                    } // else if 끝
+
+                }); // 함수 끝
+
+            }); // foreach 끝
+
+        </script>
+    </body>
+
+</html>
