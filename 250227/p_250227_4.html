@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>입력 양식</title>
+    </head>
+
+    <body>
+        <h2>회원 인증 입력 양식</h2>
+
+        <!-- page.jsp 파일이 없어서 submit시 에러가 나서 액션을 #으로 설정 -->
+        <form action="#" method="get">
+
+            <p>지점 : <input type="text" name="branch" value="천안"></p>
+
+            <!-- 이름을 필수 입력 조건으로 설정 -->
+            <p>이름 : <input type="text" name="name" required></p>
+
+            <!-- 입력 최대 글자수 제한 -->
+            <p>과정 : <input type="text" name="major" value="JAVA활용 데이터 플랫폼 과정" maxlength="30"></p>
+            
+            <!-- 입력 최소 글자수 제한 -->
+            <p>비밀번호 : <input type="password" name="password" size="20"
+                placeholder="특수문자 포함 10자리 이상" minlength="10" required></p>
+
+            <p></p>
+
+            <!-- reset은 리셋이 아닌 초기값으로 돌아가는 것 -->
+            <input type="submit" value="전송">
+            <input type="reset" value="다시작성">
+        </form>
+        <!-- form 종료 -->
+
+    </body>
+
+</html>
