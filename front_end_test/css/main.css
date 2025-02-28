@@ -37,9 +37,14 @@ body {
     /* transition-property: background-color, color, width;
     transition-duration: 3s, 3s, 3s; */
 
-    animation : test 3s;
-    animation-fill-mode : forwards;
-    animation-delay : 3s;
+    /* 2025-02-28 추가 */
+    /* 애니메이션이 작동하지 않던 이유 */
+    /* transition속성은 가상 클래스가 있을 경우에만 동작하는데 그걸 선언 하지 않았음. 단순히 페이지가 로드됐을 때는 작동하지 않고, css 파일을 저장할 때만 작동하던 이유 */
+    /* 즉, transition속성이 아니라  animation 속성을 사용하는게 맞았음. */
+
+    animation: test 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
 }
 
 @keyframes test {
