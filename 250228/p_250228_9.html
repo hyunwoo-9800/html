@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title></title>
+    </head>
+
+    <body>
+
+        <script>
+
+            var output = 0;
+
+            // 카운트 변수
+            var cnt = 0;
+
+            // 10번 반복
+            for (cnt = 1; cnt <= 10; cnt++) {
+
+                // 홀수 일 경우 다음 반복을 수행
+                if (cnt % 2 === 1) {
+
+                    continue;
+
+                }
+
+                output += 1;
+
+            } // for 끝
+
+            alert("반복한 횟수는? " + cnt + "번" +" 최종 값은? " + output);
+
+        </script>
+
+    </body>
+
+</html>

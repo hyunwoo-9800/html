@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title></title>
+    </head>
+
+    <body>
+
+        <script>
+
+            // 카운트 변수
+            var cnt = 0;
+
+            // 반복문
+            for (cnt = 0; true; cnt++) {
+
+                alert(cnt + "번째 반복문입니다.");
+
+                // 진행 여부를 물어봅니다.
+                // 확인창 띄우기
+                const isContinue = confirm("계속하시겠습니까?");
+
+                // 사용자가 입력한 값이 취소일 경우 for문 종료
+                if (!isContinue) {
+
+                    break;
+                }
+
+            } // for문 끝
+
+            alert(cnt + "번 반복하고 프로그램 종료");
+
+        </script>
+
+    </body>
+
+</html>

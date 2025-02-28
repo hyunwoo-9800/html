@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title></title>
+    </head>
+
+    <body>
+
+        <script>
+
+            // 변수 선언
+            const date = new Date();
+            const hour = date.getHours();
+
+            // hour < 11가 참일 때 실행
+            if (hour < 11) {
+
+                alert("아침 먹을 시간입니다.");
+
+            } else {
+
+                // hour < 11가 거짓일 때 실행
+               
+                // hour < 15가 참일 때 실행
+                if (hour < 15) {
+
+                    alert("점심 먹을 시간 입니다.");
+
+                // hour < 15가 거짓 일 때 실행
+                } else {
+
+                    alert("저녁 먹을 시간 입니다.");
+
+                } // else if 끝
+
+            } // else if 끝
+
+        </script>
+
+    </body>
+
+    </html>

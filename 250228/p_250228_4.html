@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title></title>
+    </head>
+
+    <body>
+
+        <script>
+
+            // 변수 선언
+            const date = new Date();
+            const hour = date.getHours();
+
+            // switch 조건문
+            // 조건이 true여서 무조건 실행 됨
+            switch (true) {
+
+                // hour < 11이 참일 때 실행
+                case hour < 11:
+                    alert("아침 먹을 시간입니다.");
+                    break;
+                    
+                // hour < 11이 거짓이고 hour < 15가 참일 때 실행
+                case hour < 15:
+                    alert("점심 먹을 시간입니다.");
+                    break;
+
+                // 위 조건식이 모두 거짓일 때 실행
+                default:
+                    alert("저녁 먹을 시간입니다.");
+                    break;
+                    
+            } // switch 종료
+
+        </script>
+
+    </body>
+
+</html>
