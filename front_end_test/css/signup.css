@@ -6,7 +6,7 @@ body {
 }
 
 /* 폼태그의 사이즈 */
-#join_form {
+#joinForm {
     width: 500px;
     margin: 0 auto;
     max-width: 500px;
@@ -25,7 +25,7 @@ body {
 }
 
 /* 전체 div영역 */
-.join_div {
+.joinDiv {
     align-items: center;
     width: 500px;
     height: 550px;
@@ -34,7 +34,7 @@ body {
 }
 
 /* 링크 이동용 버튼 그룹 */
- #btn_group button {
+ #btnGroup button {
     border: 1px solid  #adff2f;
     background-color: #006400;
     color: #ffffff;
@@ -42,13 +42,13 @@ body {
 }
 
 
-#join_form #btn_group #btn_join {
+#joinForm #btnGroup #btnJoin {
     color: white;
     background-color: #adff2f;
 } 
 
 /* 회원가입 버튼 */
-#btn_join {
+#btnJoin {
     font-size: medium;
     margin-right: -4px;
     margin-top: 20px;
@@ -56,7 +56,7 @@ body {
 }
 
 /* 로그인 버튼 */
-#btn_login {
+#btnLogin {
     font-size: medium;
     margin-left: -3px;
     margin-top: 20px;
@@ -64,14 +64,14 @@ body {
 }
 
 /* 화면에 보여지는 p태그 */
-.join_div_p {
+.joinDivP {
     color: #ffffff;
     font-weight: bold;
     font-size: 30px;
 }
 
 /* 입력 영역 크기 조정 */
-#emailAddress, #pwd, #confirm_pwd {
+#emailAddress, #pwd, #confirmPwd {
     border: 1px solid  gray;
     width: 400px;
     padding: 10px;
@@ -86,7 +86,7 @@ input:focus {
 }
 
 /* GET STARTED버튼 크기 조정 */
-.join_button {
+.joinButton {
     /* border-radius: 5px; */
     width: 420px;
     padding: 10px;

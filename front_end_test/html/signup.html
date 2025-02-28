@@ -9,28 +9,28 @@
     </head>
 
     <body>
-        <form action="#" method="get" id="join_form" class="join_form">
-            <div class="join_div">
+        <form action="#" method="get" id="joinForm" class="joinForm">
+            <div class="joinDiv">
 
                 <!-- 회원가입, 로그인 버튼 -->
-                <div id="btn_group">
-                    <button type="button" id="btn_join" onclick="go_join();">Sign Up</button>
-                    <button type="button" id="btn_login" onclick="go_login();">Log In</button>
+                <div id="btnGroup">
+                    <button type="button" id="btnJoin" onclick="goJoin();">Sign Up</button>
+                    <button type="button" id="btnLogin" onclick="goLogin();">Log In</button>
                 </div>
 
-                <p class="join_div_p">Sigh Up For Free</p>
+                <p class="joinDivP">Sigh Up For Free</p>
 
                 <!-- 입력 받을 값 -->
                 <input type="email" id="emailAddress" name="emailAddress" placeholder="Email Address *"
-                    onblur="email_check();">
+                    onblur="emailCheck();">
                 <br>
                 <input type="password" id="pwd" name="pwd" placeholder="Set A Password *"> <br>
-                <input type="password" id="confirm_pwd" name="confirm_pwd" placeholder="Confirm A Password *">
+                <input type="password" id="confirmPwd" name="confirmPwd" placeholder="Confirm A Password *">
                 <br>
 
                 <!-- 회원가입 버튼 -->
                 <!-- 버튼을 누를 시 회원가입 체크 함수 호출 -->
-                <button type="button" id="join_button" class="join_button" name="join_button" onclick="join();">GET
+                <button type="button" id="joinButton" class="joinButton" name="joinButton" onclick="join();">GET
                     STARTED</button>
             </div>
         </form>

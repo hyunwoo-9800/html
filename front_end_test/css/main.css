@@ -6,10 +6,10 @@ body {
 }
 
 /* 출력될 div태그 css */
-#main_box {
+#mainBox {
     width: 400px;
     height: 75px;
-    background-color: #008000;
+    background-color: #008b8b;
     margin: 0 auto;
     max-width: 450px;
     position: absolute;
@@ -26,7 +26,7 @@ body {
     transform: translate(-50%, -50%);
 
     /* 폰트 컬러 */
-    color: #ffffff;
+    color: #008b8b;
     font-size: xx-large;
     text-align: center;
     line-height: 75px;
@@ -34,6 +34,41 @@ body {
     border-radius: 25px;
 
     /* 애니메이션 효과 */
-    transition-property: background-color, color, width;
-    transition-duration: 3s, 3s, 3s;
+    /* transition-property: background-color, color, width;
+    transition-duration: 3s, 3s, 3s; */
+
+    animation : test 3s;
+    animation-fill-mode : forwards;
+    animation-delay : 3s;
+}
+
+@keyframes test {
+
+    0% {
+        color: #ffffff;
+        background-color: #008000;
+
+    }
+
+    25% {
+
+        color: #ffffff;
+        background-color: #008000;
+
+    }
+
+    50% {
+
+        color: #ffffff;
+        background-color: #008000;
+
+    }
+
+    100% {
+
+        color: #ffffff;
+        background-color: #008000;
+
+    }
+
 }
