@@ -1,0 +1,8 @@
+/* backgroung_what_i_do.html css */
+
+.backgroundHeadder {
+    background: url() center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 120px;
+}

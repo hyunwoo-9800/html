@@ -1,12 +1,12 @@
 /* headdr.html css */
-.container {
+.headderContainer {
     width: 1140px;
     margin: 0 auto;
 }
 
 header {
-    /* position: absolute; */
-    position: fixed;
+    position: absolute;
+    /* position: fixed; */
     color: #ffffff;
     top: 0;
     z-index: 1;
@@ -14,7 +14,7 @@ header {
     padding: 1rem;
 }
 
-header .container {
+header .headderContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,11 +29,13 @@ header nav ul li {
     padding: 10px;
 }
 
+
+/* 다른 페이지에서 헤더 영역 색상이 제대로 보이지 않아서 색상 변경 */
 header button {
     background: transparent;
     border: 0;
     cursor: pointer;
-    color: #ffffff;
+    color: #adff2f;;
 }
 
 header h1 button {
@@ -42,6 +44,6 @@ header h1 button {
 }
 
 header nav ul li button {
-    color: #ffffff;
+    color: #adff2f;
     font-size: 1.2rem;
 }

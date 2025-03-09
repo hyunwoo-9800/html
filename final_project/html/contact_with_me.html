@@ -15,6 +15,32 @@
 
     <body>
 
+        <script>
+
+            window.addEventListener('load', function () {
+                var allElements = document.getElementsByTagName('*');
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open('GET', includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+
+        </script>
+
+        <div data-include-path="headder.html"></div>
+
+        <!-- 헤더 영역과 띄우기 위해 추가 -->
+        <div data-include-path="backgroundHeadder.html"></div>
+
         <section id="contact" class="contact">
 
             <div class="container">
@@ -36,7 +62,7 @@
 
                             <div class="info-text">
                                 <h3>phone</h3>
-                                <p>010-2222-1111</p>
+                                <p>010-XXXX-YYYY</p>
                             </div>
 
                         </div>
@@ -50,7 +76,7 @@
 
                             <div class="info-text">
                                 <h3>email</h3>
-                                <p>sucoding@naver.com</p>
+                                <p>hyunwoo_9800@naver.com</p>
                             </div>
 
                         </div>
@@ -64,7 +90,7 @@
 
                             <div class="info-text">
                                 <h3>address</h3>
-                                <p>Samseong-ro, Gangnam-gu, Seoul, Republic of Korea</p>
+                                <p>66, Segyogongwon-ro, Pyeongtaek-si, Gyeonggi-do, Republic of Korea</p>
                             </div>
 
                         </div>
@@ -103,6 +129,9 @@
 
         </section>
         <!-- section 끝 -->
+
+        <!-- 헤더 링크 이동용 js -->
+        <script src="../js/link.js"></script>
 
     </body>
 
