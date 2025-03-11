@@ -12,27 +12,7 @@
 
     <body>
 
-        <script>
-
-            window.addEventListener('load', function () {
-                var allElements = document.getElementsByTagName('*');
-                Array.prototype.forEach.call(allElements, function (el) {
-                    var includePath = el.dataset.includePath;
-                    if (includePath) {
-                        var xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function () {
-                            if (this.readyState == 4 && this.status == 200) {
-                                el.outerHTML = this.responseText;
-                            }
-                        };
-                        xhttp.open('GET', includePath, true);
-                        xhttp.send();
-                    }
-                });
-            });
-
-        </script>
-
+        <!-- 헤더 파일을 임포트하기 위한 div영역 -->
         <div data-include-path="headder.html"></div>
 
         <!-- 헤더 영역과 띄우기 위해 추가 -->
@@ -96,6 +76,9 @@
 
         <!-- 헤더 링크 이동용 js -->
         <script src="../js/link.js"></script>
+
+        <!--  헤더 영역 임포트용 js -->
+        <script src="../js/headderImport.js"></script>
 
     </body>
 
